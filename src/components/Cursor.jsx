@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 
-function Cursor() {
+function Cursor({state}) {
     const [pos, setPos] = useState({ x: 0, y: 0 })
 
     const updateMouse = (e) => {
@@ -22,11 +22,14 @@ function Cursor() {
 
     return (
         <>
+        {state && (
             <motion.div
-                className="w-5 h-5 bg-black rounded-xl absolute"
-                id="cursor"
-                animate={{ x: pos.x, y: pos.y }}
+            className="w-5 h-5 bg-black rounded-xl absolute"
+            layoutId="sidecur"
+            animate={{ x: pos.x, y: pos.y }}
+            transition={{type: "tween", ease: "backOut"}}
             ></motion.div>
+            )}
         </>
     )
 }
