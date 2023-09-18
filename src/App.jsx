@@ -1,17 +1,17 @@
 
 import { useState } from 'react';
-import Cursor from './components/Cursor';
 import FloatingMenu from './components/FloatingMenu';
-
+import './index.css';
 
 function App() {
   const [cursor,setCursor] = useState(true)
 
   return (
-    <div className='overflow-hidden'>
-      <Cursor state={cursor} />
+    <>
       <FloatingMenu setCursor={setCursor} />
+    <div className='flex w-full h-full justify-center items-center'>
     </div>
+    </>
   )
 }
 
