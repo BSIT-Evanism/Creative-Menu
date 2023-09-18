@@ -1,0 +1,24 @@
+.mask {
+    mask-image: url(./assets/blobanimation.svg);
+    position: absolute;
+    background: brown;
+    mask-position: 50%;
+    color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: violet;
+    line-height: 66px;
+    align-items: center;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    color: violet;
+    line-height: 66px;
+    align-items: center;
+}
