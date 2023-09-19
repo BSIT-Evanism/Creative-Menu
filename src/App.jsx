@@ -111,7 +111,7 @@ function App() {
               </div>
             </div>
             <img
-              src="../public/evan.svg"
+              src="./assets/evan.svg"
               alt="evan"
               className="w-10vw h-10vh absolute bottom-20 left-45%"
             />
