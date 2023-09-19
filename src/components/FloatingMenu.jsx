@@ -77,17 +77,29 @@ export default function FloatingMenu({ setState }) {
           </ul>
 
 
-          <div className={`h-full w-full masks flex justify-center items-center ${value === 'About' ? 'bg-red' : value === 'Projects' ? 'bg-pink' : value === 'Contacts' ? 'bg-purple' : null}`}>
+          <div className={`h-full w-full masks flex justify-center items-center transition-all duration-2000ms ${value === 'About' ? 'bg-red scale-200%' : value === 'Projects' ? 'bg-pink scale-200%' : value === 'Contacts' ? 'bg-purple scale-200%' : hover && active ? 'scale-50%' : !active ? 'scale-400%' : null}`}>
 
           </div>
         </nav>
 
-        <div className=' flex absolute bottom-8vh left-10vw color-red fw-700'>
+        <div className='w-80vw flex absolute justify-between items-center bottom-8vh left-10vw color-red fw-700'>
           <div>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
             </svg>
             &nbsp;Close Menu
+          </div>
+
+          <div className='flex  justify-center items-center text-center gap-10 group/call transition-all duration-300ms'>
+            <a href="https://www.linkedin.com/in/john-evan-solanoy-72b829262" target='_blank' rel="noreferrer">
+              <p className='group-hover/call:opacity-50% hover:important:opacity-100% transition-all duration-300ms cursor-pointer'><i className="fa-brands fa-linkedin"></i>&nbsp;LinkedIn</p>
+            </a>
+            <a href="https://dribbble.com/EvanSol" target='_blank' rel="noreferrer">
+              <p className='group-hover/call:opacity-50% hover:important:opacity-100% transition-all duration-300ms cursor-pointer'><i className="fa-brands fa-dribbble"></i>&nbsp;Dribbble</p>
+            </a>
+            <a href="https://bento.me/evansolanoy" target='_blank' rel='noreferrer'>
+              <p className='group-hover/call:opacity-50% hover:important:opacity-100% transition-all duration-300ms cursor-pointer'><i className="fa-solid fa-box-open"></i>&nbsp;Bento</p>
+            </a>
           </div>
         </div>
       </motion.div>
