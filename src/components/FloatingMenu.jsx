@@ -32,11 +32,12 @@ export default function FloatingMenu({ setState }) {
     hover && !active
       ? "800px"
       : active
-      ? "3500px"
+      ? "5000px"
       : active && hover
       ? "2000px"
       : "500px";
-  const position = active ? "-300px" : "-200px";
+
+  const position = active ? "-500px" : "-200px";
 
   useEffect(() => {
     if (hover && active) {

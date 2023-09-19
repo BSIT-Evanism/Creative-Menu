@@ -60,10 +60,8 @@ function App() {
           {state === "only" && (
             <motion.div
               className="absolute top-5 left-5  overflow-hidden fw-200"
-              initial={{ opacity: 0 }}
               animate={{
                 rotate: 360,
-                opacity: 1,
                 transition: {
                   duration: 10,
                   repeat: Infinity,
