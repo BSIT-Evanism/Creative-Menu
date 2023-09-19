@@ -17,7 +17,7 @@ function App() {
           <>
             <motion.div className="text-2xl absolute top-0 text-black z-10" initial={{ y: -500 }} animate={{ y: -100, transition: { type: "spring", duration: 1 } }}>
               <Marquee className="overflow-hidden" gradient autoFill>
-                <ul className="flex gap-1rem">
+                <ul className="flex gap-1rem fw-400">
                   <li> - Back to Main - </li>
                   <li> - Back to Main - </li>
                 </ul>
@@ -26,7 +26,7 @@ function App() {
             </motion.div>
             <motion.div className="text-2xl absolute bottom-0 text-black z-10" initial={{ y: 500 }} animate={{ y: 100, transition: { type: "spring", duration: 1 } }}>
               <Marquee className="overflow-hidden" gradient autoFill direction="right">
-                <ul className="flex gap-1rem">
+                <ul className="flex gap-1rem fw-400">
                   <li> - Back to Main - </li>
                   <li> - Back to Main - </li>
                 </ul>
@@ -41,7 +41,7 @@ function App() {
         <FloatingMenu setState={setState} />
         <div className="body">
           <motion.div
-            className="absolute top-5 left-5  overflow-hidden"
+            className="absolute top-5 left-5  overflow-hidden fw-200"
             animate={{ rotate: 360, transition: { duration: 10, repeat: Infinity, repeatType: "loop" } }}
           >
             <ReactCurvedText
@@ -71,7 +71,7 @@ function App() {
                       rel="noreferrer"
                       whileHover={{ scale: 1.1 }}
                     >
-                      <button>
+                      <button className="fw-200">
                         My Portfolio
                       </button>
                     </motion.a>
@@ -82,7 +82,7 @@ function App() {
                       rel="noreferrer"
                       whileHover={{scale: 1.1}}
                       >
-                      <button>
+                      <button className="fw-200">
                         My Bento
                       </button>
                     </motion.a>

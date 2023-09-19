@@ -53,13 +53,13 @@ export default function FloatingMenu({ setState }) {
           />
         </motion.div>
         <div
-          className={`h-15 w-15 absolute top-10 left-10  rounded-full ${active ? 'bg-red' : 'bg-pink'} ${active && 'translate-y-80vh'} transition-all duration-300ms`}
+          className={`h-15 w-15 absolute top-10 left-10 cursor-pointer  rounded-full ${active ? 'bg-red animate-pulse' : 'bg-pink'} ${active && 'translate-y-75vh'} transition-all duration-300ms`}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
           onClick={() => setActive(!active)}
         ></div>
-        <nav className='absolute top-40 left-50 flex justify-center items-center group/over '>
-          <ul className='text-pink text-7xl leading-25 '>
+        <nav className='absolute top-50 left-50 flex justify-center items-center group/over '>
+          <ul className='text-pink text-7xl leading-25 fw-700'>
             <li className='cursor-pointer uppercase opacity-100% group-hover/over:opacity-50% hover:translate-x-3 hover:important:opacity-100% transition-all duration-500ms' onClick={() => setActive(!active)}
               onMouseEnter={() => setValue('About')}
               onMouseLeave={() => setValue('')}
@@ -77,11 +77,20 @@ export default function FloatingMenu({ setState }) {
           </ul>
 
 
-          <div className={`h-full w-full masks flex justify-center items-center ${value === 'About' ? 'bg-red' : value === 'Projects' ? 'bg-pink' : value === 'Contacts' ? 'bg-purple' : null }`}>
+          <div className={`h-full w-full masks flex justify-center items-center ${value === 'About' ? 'bg-red' : value === 'Projects' ? 'bg-pink' : value === 'Contacts' ? 'bg-purple' : null}`}>
 
           </div>
-      </nav>
-    </motion.div>
-  </>
+        </nav>
+
+        <div className=' flex absolute bottom-8vh left-10vw color-red fw-700'>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+            </svg>
+            &nbsp;Close Menu
+          </div>
+        </div>
+      </motion.div>
+    </>
   )
 }
