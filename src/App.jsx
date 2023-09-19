@@ -111,7 +111,7 @@ function App() {
               </div>
             </div>
             <img
-              src="./src/assets/evan.webp"
+              src="https://i.ibb.co/t870Lw1/evan.webp"
               alt="evan"
               className="w-10vw h-10vh absolute bottom-20 object-contain left-45%"
             />
