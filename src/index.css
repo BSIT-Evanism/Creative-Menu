@@ -16,3 +16,19 @@
     mask-size: 100px;
     -webkit-mask-size: 800px;
 }
+
+
+.masks {
+    position: fixed;
+    -webkit-mask-image: url('./assets/blobanimation.svg');
+    mask-image: url('./assets/blobanimation.svg');
+    mask-repeat: no-repeat;
+    background-color: pink;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 70vw 10vh;
+    mask-size: 800px;
+    -webkit-mask-size: 800px;
+    z-index: 40;
+    will-change: auto;
+    pointer-events: none;
+}
