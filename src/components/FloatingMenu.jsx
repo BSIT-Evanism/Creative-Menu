@@ -32,11 +32,11 @@ export default function FloatingMenu({ setState }) {
     hover && !active
       ? "800px"
       : active
-      ? "5000px"
+      ? "3500px"
       : active && hover
       ? "2000px"
       : "500px";
-  const position = active ? "-700px" : "-200px";
+  const position = active ? "-300px" : "-200px";
 
   useEffect(() => {
     if (hover && active) {
@@ -65,7 +65,11 @@ export default function FloatingMenu({ setState }) {
           className="absolute top-5 left-5  overflow-hidden"
           animate={{
             rotate: 360,
-            transition: { duration: 10, repeat: Infinity, repeatType: "loop" },
+            transition: {
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "loop",
+            },
           }}
         >
           <ReactCurvedText
