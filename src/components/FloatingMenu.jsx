@@ -88,13 +88,43 @@ export default function FloatingMenu({ setState }) {
           />
         </motion.div>
         <div
-          className={`h-15 w-15 absolute top-10 left-10 cursor-pointer  rounded-full ${
+          className={`h-15 w-15 flex justify-center items-center absolute top-10 left-10 cursor-pointer  rounded-full ${
             active ? "bg-red animate-pulse" : "bg-pink"
           } ${active && "translate-y-75vh"} transition-all duration-300ms`}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
           onClick={() => setActive(!active)}
-        ></div>
+        >
+          <svg
+            width="35"
+            height="35"
+            viewBox="0 0 35 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {!active && (
+              <>
+                <circle cx="10.5" cy="10.5" r="3.5" fill="#D9D9D9" />
+                <circle cx="10.5" cy="24.5" r="3.5" fill="#D9D9D9" />
+                <circle cx="24.5" cy="24.5" r="3.5" fill="#D9D9D9" />
+                <circle cx="24.5" cy="10.5" r="3.5" fill="#D9D9D9" />
+              </>
+            )}
+
+            {active && (
+              <>
+                <circle cx="8.5" cy="8.5" r="3.5" fill="#D9D9D9" />
+                <circle cx="8.5" cy="26.5" r="3.5" fill="#D9D9D9" />
+                <circle cx="26.5" cy="26.5" r="3.5" fill="#D9D9D9" />
+                <circle cx="26.5" cy="8.5" r="3.5" fill="#D9D9D9" />
+                <circle cx="17.5" cy="17.5" r="3.5" fill="#D9D9D9" />
+                {/* <circle cx="31.5" cy="31.5" r="3.5" fill="#D9D9D9" /> */}
+                {/* <circle cx="3.5" cy="31.5" r="3.5" fill="#D9D9D9" /> */}
+                {/* <circle cx="31.5" cy="3.5" r="3.5" fill="#D9D9D9" /> */}
+              </>
+            )}
+          </svg>
+        </div>
         <nav className="absolute top-50 left-50 flex justify-center items-center group/over ">
           <AnimatePresence>
             {active && (
