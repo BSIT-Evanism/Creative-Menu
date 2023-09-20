@@ -79,7 +79,20 @@ function App() {
                 ry={50}
                 //textProps={{ style: { color: "black", fontSize: 20, position: "absolute" } }}
               />
-              <div className="h-50px w-50px absolute top-6 left-6  rounded-full bg-black z--20"></div>
+              <div className="flex justify-center items-center h-50px w-50px absolute top-6 left-6  rounded-full bg-black z--20">
+                <motion.svg
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="3.5" cy="3.5" r="3.5" fill="#D9D9D9" />
+                  <circle cx="3.5" cy="17.5" r="3.5" fill="#D9D9D9" />
+                  <circle cx="17.5" cy="17.5" r="3.5" fill="#D9D9D9" />
+                  <circle cx="17.5" cy="3.5" r="3.5" fill="#D9D9D9" />
+                </motion.svg>
+              </div>
             </motion.div>
           )}
           <div className="flex justify-center items-center z--10">
